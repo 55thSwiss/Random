@@ -1,4 +1,4 @@
-# Manipulating a MS Access database in Pythin, Pandas using PyODBC
+# Manipulating a MS Access database in Python, Pandas using PyODBC
 
 ## Purpose
 
