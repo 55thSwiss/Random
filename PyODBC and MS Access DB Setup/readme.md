@@ -18,4 +18,4 @@ If you're not using Anaconda (which comes with PYODBC preloaded), download the P
 
 Another big hang up I had was although I had installed the 64 bit version of Microsoft Office, it did not come with the DSN drivers needed to interact with the data base. You can check the drivers that Python recognizes using the code below:
 
-![Python Drivers](C:\Users\MacalusoC\Desktop\Connecting_to_pyodbc\7pyodbcdrivers().png "Python Driver List")
+![Python Drivers](7pyodbcdrivers().png)
