@@ -1,19 +1,21 @@
 '''
-format directory (single level of folders with subfiles) 
+format directory (single level of folders with subfiles)
 into single whitespace strings.
 Just change 'src' for source directory
 
 '''
+
 import os
 
-src = r'C:\Users\MacalusoC\Desktop\Technical Docs\TLC_Program_Release\Machine_Folders\EvoDECO 10'
+src = (r'C:\Users\MacalusoC\Desktop\Technical Docs\TLC_Program_Release'
+       r'\Machine_Folders\EvoDECO 10')
 
 
-def stringFormat(src): 
+def stringFormat(src):
     '''
     iterate folders in directory
     '''
-    # create a list of the folders in the src directory  
+    # create a list of the folders in the src directory
     folder_list = os.listdir(src)
     # iterate over the folders
     for f in folder_list:
@@ -30,11 +32,8 @@ def stringFormat(src):
         # rename the folder with the new formatted name
         try:
             os.rename(src + '\\' + f, src + '\\' + string)
-        except:
+        except FileExistsError:
             print(string)
-        '''
-        iterate files in sub directory
-        '''
         sub_dir = (src + '\\' + string)
         # create a list of files inside each folder
         file_list = os.listdir(sub_dir)
@@ -53,12 +52,13 @@ def stringFormat(src):
             # rename the file with the formatted name
             try:
                 os.rename(sub_dir + '\\' + f, sub_dir + '\\' + string)
-            except:
+            except FileExistsError:
                 print(string)
 
 
 def main():
     stringFormat(src)
+
 
 if __name__ == "__main__":
     main()
