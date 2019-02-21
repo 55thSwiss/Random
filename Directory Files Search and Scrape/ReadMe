@@ -1,0 +1,2 @@
+
+This script searching a direction for files with a particular letter combination, 'WY', then reads the file line by line to look for a string (in this case 'M428' - I was search CNC programs). It returns the name of the file is there's a match.
